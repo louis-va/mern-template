@@ -1,49 +1,58 @@
-# MERN Template
+# MERN Stack Template
 
-This template provides a minimal setup to get React working with Typescript, Vite and a Express / Mongo backend.
+This template sets up a streamlined environment for React with TypeScript, Vite, and an Express / MongoDB backend.
 
-<!-- Technology -->
 ## Packages
 
 | Client      | Server    |
 |-------------|-----------|
 | Vite        | Express   |
 | React       | MongoDB   |
-| Typescript  | Mongoose  |
+| TypeScript  | Mongoose  |
 | ESLint      | CORS      |
 |             | Dotenv    |
-|             | Typescript|
+|             | TypeScript|
 |             | ESLint    |
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
-The client and the server run independantly. The client is connected to the server's API via localhost. The API's URL can be edited in the client's ```.env``` file.
+The client and server run independently. The client connects to the server's API via localhost. You can edit the API's URL in `/client/.env`.
 
 ### ⚙️ Prerequisites
 
-You need to have node and npm installed on your machine to run this project locally.  
+Ensure you have `Node.js` and `npm` installed on your machine to run this project locally.
 
-#### npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### 🪴 Database Setup
+
+#### 1. Create the Database
+Create a MongoDB database via [MongoDB Atlas](https://www.mongodb.com/atlas), another managed cloud service, or by self-hosting the database.
+
+#### 2. Configure Environment File
+Create `/server/.env.local`.
+
+#### 3. Set Environment Variables
+Add your database's URL to `MONGO_DB_URL` in `/server/.env.local`.
+```txt
+MONGO_DB_URL = mongodb+srv://<user>:<password>@<url>:<port>/<database>
+```
 
 ### 💾 Installation
 
-#### 1. Clone the repo
+#### 1. Clone the Repository
 ```sh
 git clone git@github.com:louis-va/mern-template.git
 ```
-#### 2. Install NPM packages
+
+#### 2. Install NPM Packages
 ```sh
-# root of the project
+# at the root of the project
 npm install
 ```
-#### 3. Install client and server NPM packages
+
+#### 3. Install Client and Server NPM Packages
 ```sh
-# root of the project
+# at the root of the project
 npm run install
 ```
 OR
@@ -58,19 +67,19 @@ npm install
 
 ### 🚀 Execution
 
-#### Run client & server
+#### Run Client & Server
 ```sh
-# root of the project
+# at the root of the project
 npm run dev
 ```
 
-#### Only run client
+#### Run Client Only
 ```sh
 cd client/
 npm run dev
 ```
 
-#### Only run server
+#### Run Server Only
 ```sh
 cd server/
 npm run dev
@@ -78,19 +87,18 @@ npm run dev
 
 ### 🚚 Production
 
-#### Build then run client & server
+#### Build and Run Client & Server
 ```sh
-# root of the project
+# at the root of the project
 npm run build
 npm run start
 ```
 
 #### Deployment
-When deploying the project, set the ```VITE_API_URL``` in the client's ```.env.production``` file as the URL to your database and configure the ```allowedOrigins``` in the server's ```index.ts``` to allow your client's URL to connect to the server.
+During deployment, in `/client/.env.production`, set `VITE_API_URL` as your database URL. Additionally, configure the `allowedOrigins` in `/server/index.ts` to permit your client's URL to connect to the server.
 
-### 🏠 Localhost
+### 🌐 Ports
 **Client**: http://localhost:3000 <br>
 **Server**: http://localhost:8000
 
-You can edit those values in the server's ```.env``` file and the client's ```vite.config.ts``` file. <br>
-If you edit the client's port, you'll have to edit the ```allowedOrigins``` in the server's ```index.ts``` file with the new port.
+You can modify the port values in `/server/.env` and `/client/vite.config.ts`. If you change the client's port, remember to update `allowedOrigins` in `/server/index.ts` with the new port.
