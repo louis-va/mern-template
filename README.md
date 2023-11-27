@@ -1,11 +1,13 @@
 # React + TypeScript + Vite + Express + Mongo
 
-This template provides a minimal setup to get React working with Typescript and in Vite with an Express / Mongo backend.
+This template provides a minimal setup to get React working with Typescript and Vite with an Express / Mongo backend.
 
 <!-- GETTING STARTED -->
 # Getting Started
 
-## Prerequisites
+The client and the server run indepedantly. The client is connected to the server's API via localhost. The API's URL can be edited in the client's ```.env``` file.
+
+## ⚙️ Prerequisites
 
 You need to have node and npm installed on your machine to run this project locally.  
 
@@ -14,7 +16,7 @@ You need to have node and npm installed on your machine to run this project loca
   npm install npm@latest -g
   ```
 
-## Installation
+## 💾 Installation
 
 ### 1. Clone the repo
 ```sh
@@ -38,34 +40,35 @@ cd server/
 npm install
 ```
 
-## Execution
+## 🚀 Execution
+
 ### Run client & server
 ```sh
 npm run dev
 ```
-**Client**: http://localhost:5173 |
-**Server**: http://localhost:8000
 
 ### Only run client
 ```sh
 cd client/
 npm run dev
 ```
-**Client**: http://localhost:5173
 
 ### Only run server
 ```sh
 cd server/
 npm run dev
 ```
-**Client**: http://localhost:8000
 
-
-## Production
+## 🚚 Production
 ### Build then run client & server
 ```sh
 npm run build
 npm run start
 ```
-**Client**: http://localhost:4173 |
-**Server**: http://localhost:8000
+
+## 🏠 Localhost
+**Client**: localhost:3000 <br>
+**Server**: localhost:8000
+
+You can edit those values in the server's ```.env``` file and the client's ```vite.config.ts``` file. <br>
+If you edit the client's port, you'll have to edit the ```allowedOrigins``` in the server's ```index.ts``` file.

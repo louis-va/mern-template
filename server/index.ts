@@ -8,7 +8,7 @@ const app: Express = express();
 const port = process.env.PORT;
 
 // Allow requests from multiple origins
-const allowedOrigins = ['http://localhost:4173', 'http://localhost:5173'];
+const allowedOrigins = ['http://localhost:3000'];
 
 app.use(cors({
   origin: function (origin, callback) {
