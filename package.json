@@ -4,6 +4,7 @@
   "description": "This template provides a minimal setup to get React working in Vite with an Express / Mongo backend.",
   "main": "",
   "scripts": {
+    "install": "npm install --prefix server && npm install --prefix client",
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "build": "npm run build --prefix server && npm run build --prefix client",
     "start": "concurrently \"npm run start --prefix server\" \"npm run preview --prefix client\""
