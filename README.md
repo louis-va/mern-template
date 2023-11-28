@@ -14,10 +14,9 @@ This template sets up a streamlined environment for React with TypeScript, Vite,
 |             | TypeScript|
 |             | ESLint    |
 
-
 ## Getting Started
 
-The client and server run independently. The client connects to the server's API via localhost. You can edit the API's URL in `/client/.env`.
+The client and server run independently. The client connects to the backend via localhost. You can edit the server's URL in `/client/.env`.
 
 ### ⚙️ Prerequisites
 
